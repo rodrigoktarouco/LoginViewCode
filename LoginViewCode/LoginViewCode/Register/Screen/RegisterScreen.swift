@@ -7,12 +7,24 @@
 
 import UIKit
 
+protocol RegisterScreenProtocol: AnyObject {
+    func actionBackButton()
+    func actionRegisterButton()
+}
+
 class RegisterScreen: UIView {
+
+    weak private var delegate: RegisterScreenProtocol?
+
+    func delegate(delegate: RegisterScreenProtocol?) {
+        self.delegate = delegate
+    }
 
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "back"), for: .normal)
+        button.addTarget(self, action: #selector(self.didPressBackButton), for: .touchUpInside)
         return button
     }()
 
@@ -43,7 +55,7 @@ class RegisterScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Insert your password"
         textfield.isSecureTextEntry = true
         textfield.font = UIFont.systemFont(ofSize: 14)
@@ -59,6 +71,7 @@ class RegisterScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(self.didPressRegisterButton), for: .touchUpInside)
         return button
     }()
 
@@ -75,11 +88,23 @@ class RegisterScreen: UIView {
         self.addSubview(emailTextField)
         self.addSubview(passwordTextField)
         self.addSubview(registerButton)
-
     }
 
     private func configBackground() {
         self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
+    }
+
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
+
+    @objc private func didPressBackButton() {
+        self.delegate?.actionBackButton()
+    }
+
+    @objc private func didPressRegisterButton() {
+        self.delegate?.actionRegisterButton()
     }
 
     required init?(coder: NSCoder) {

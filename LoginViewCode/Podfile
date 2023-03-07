@@ -1,0 +1,11 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '10.0'
+
+target 'LoginViewCode' do
+
+  use_frameworks!
+
+  # Pods for LoginViewCode
+   pod 'SnapKit', '~> 5.6.0'
+
+end

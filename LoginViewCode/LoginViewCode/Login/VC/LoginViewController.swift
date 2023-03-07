@@ -39,6 +39,7 @@ extension LoginViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         print("TextFieldDidENt")
+        self.loginScreen?.validateTextFields()
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {

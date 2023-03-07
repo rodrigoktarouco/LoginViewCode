@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol LoginScreenProtocol: AnyObject {
     func actionLoginButton()
@@ -91,7 +92,16 @@ class LoginScreen: UIView {
         super.init(frame: frame)
         self.configBackground()
         self.configSuperView()
-        self.setUpConstraint()
+
+        //MARK: SnapKit
+        self.configLoginLabelConstraint()
+        self.configLogoAppImageViewConstraint()
+        self.configEmailtextFieldConstraint()
+        self.configPasswordTextFieldConstraint()
+        self.configLoginButtonConstraint()
+        self.configRegisterButtonConstraint()
+        //----------------------------------------
+        self.configButtonEnable(false)
     }
 
     private func configBackground() {
@@ -122,47 +132,29 @@ class LoginScreen: UIView {
         self.delegate?.actionRegisterButton()
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public func validateTextFields() {
+        let email: String = self.emailTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
+
+        if !email.isEmpty && !password.isEmpty {
+            self.configButtonEnable(true)
+        } else {
+            self.configButtonEnable(false)
+        }
     }
 
-    //MARK: equal to: Based in a determined element
+    private func configButtonEnable(_ enable: Bool) {
+        if enable {
+            self.loginButton.setTitleColor(.white, for: .normal)
+            self.loginButton.isEnabled = true
+        } else {
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginButton.isEnabled = false
+        }
+    }
 
-    //MARK: constant: distance / closer to a referenced element.
-
-    //MARK: equalToConstant: setting a fixed value for an element.
-
-    func setUpConstraint() {
-        NSLayoutConstraint.activate([
-            self.loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-
-            self.logoAppImageView.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 20),
-            self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-            self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
-
-            self.emailTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 20),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
-
-            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
-
-            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
-            self.loginButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            self.loginButton.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
-
-            self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 20),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            self.registerButton.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor)
-
-        ])
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }

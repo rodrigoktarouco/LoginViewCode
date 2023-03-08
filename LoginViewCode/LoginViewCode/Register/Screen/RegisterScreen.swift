@@ -79,7 +79,13 @@ class RegisterScreen: UIView {
         super.init(frame: frame)
         self.configBackground()
         self.configSuperView()
-        self.setUpConstraints()
+        //MARK: SnapKit Constraint methods
+        self.configAddUserImageConstraint()
+        self.configBackButtonConstraint()
+        self.configEmailTextFieldConstraint()
+        self.configPasswordTextFieldConstraint()
+        self.configRegisterButtonConstraint()
+        //-----------------------------------
     }
 
     private func configSuperView() {
@@ -131,33 +137,4 @@ class RegisterScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    private func setUpConstraints() {
-        NSLayoutConstraint.activate([
-            self.addUserImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.addUserImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.addUserImage.widthAnchor.constraint(equalToConstant: 150),
-            self.addUserImage.heightAnchor.constraint(equalToConstant: 150),
-
-            self.backButton.topAnchor.constraint(equalTo: self.addUserImage.topAnchor),
-            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-
-            self.emailTextField.topAnchor.constraint(equalTo: self.addUserImage.bottomAnchor, constant: 10),
-            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
-
-            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
-
-            self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 15),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            self.registerButton.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor)
-
-        ])
-    }
-
 }

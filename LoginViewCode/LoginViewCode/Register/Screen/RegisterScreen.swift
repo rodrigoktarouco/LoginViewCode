@@ -46,6 +46,7 @@ class RegisterScreen: UIView {
         textfield.placeholder = "Insert your email"
         textfield.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
+        textfield.autocapitalizationType = .none
         return textfield
     }()
 
@@ -132,6 +133,14 @@ class RegisterScreen: UIView {
             self.registerButton.setTitleColor(.lightGray, for: .normal)
             self.registerButton.isEnabled = false
         }
+    }
+
+    public func getEmail() -> String {
+        return self.emailTextField.text ?? ""
+    }
+
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
     }
 
     required init?(coder: NSCoder) {

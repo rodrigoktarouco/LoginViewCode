@@ -12,12 +12,14 @@ class RegisterViewController: UIViewController {
 
     var registerScreen: RegisterScreen?
     var auth: Auth?
+    var alert: AlertManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerScreen?.configTextFieldDelegate(delegate: self)
         self.registerScreen?.delegate(delegate: self)
         self.auth = Auth.auth()
+        self.alert = AlertManager(controller: self)
 
     }
 
@@ -45,15 +47,15 @@ extension RegisterViewController: RegisterScreenProtocol {
     }
 
     func actionRegisterButton() {
+        guard let register = self.registerScreen else { return }
 
-        let email: String = self.registerScreen?.emailTextField.text ?? ""
-        let password: String = self.registerScreen?.passwordTextField.text ?? ""
-
-        self.auth?.createUser(withEmail: email, password: password) { (result, error) in
+        self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword()) { (result, error) in
             if error != nil {
-                print("Error registering user!")
+                self.alert?.getAlert(title: "Attention", message: "Error registering user!")
             } else {
-                print("Success registering user!")
+                self.alert?.getAlert(title: "Attention", message: "Success registering user!", completion: {
+                    self.navigationController?.popViewController(animated: true)
+                })
             }
         }
     }

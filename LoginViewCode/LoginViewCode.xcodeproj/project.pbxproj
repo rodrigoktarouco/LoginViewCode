@@ -13,6 +13,7 @@
 		C3469D1B29B773BF0065336A /* LoginScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3469D1A29B773BF0065336A /* LoginScreenConstraints.swift */; };
 		C346E8C029ACD7CA0089D0BA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346E8BF29ACD7CA0089D0BA /* LoginScreen.swift */; };
 		C36CB27D29B8D17300288B8F /* RegisterScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CB27C29B8D17300288B8F /* RegisterScreenConstraints.swift */; };
+		C376552129BB850C007913A3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376552029BB850C007913A3 /* AlertManager.swift */; };
 		C3BF945A29BA141200D3B507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3BF945929BA141200D3B507 /* GoogleService-Info.plist */; };
 		C3C57E8229A8E4FF009C63A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C57E8129A8E4FF009C63A8 /* AppDelegate.swift */; };
 		C3C57E8429A8E4FF009C63A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C57E8329A8E4FF009C63A8 /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 		C3469D1A29B773BF0065336A /* LoginScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenConstraints.swift; sourceTree = "<group>"; };
 		C346E8BF29ACD7CA0089D0BA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		C36CB27C29B8D17300288B8F /* RegisterScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenConstraints.swift; sourceTree = "<group>"; };
+		C376552029BB850C007913A3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		C3BF945929BA141200D3B507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3C57E7E29A8E4FF009C63A8 /* LoginViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C57E8129A8E4FF009C63A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		C376551F29BB84F9007913A3 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C376552029BB850C007913A3 /* AlertManager.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		C3C57E7529A8E4FF009C63A8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		C3C57E8029A8E4FF009C63A8 /* LoginViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				C376551F29BB84F9007913A3 /* Alert */,
 				C3C57E8129A8E4FF009C63A8 /* AppDelegate.swift */,
 				C3C57E8329A8E4FF009C63A8 /* SceneDelegate.swift */,
 				C346E8BB29ACD7570089D0BA /* Login */,
@@ -277,6 +288,7 @@
 				C3C57E8229A8E4FF009C63A8 /* AppDelegate.swift in Sources */,
 				C3C57E8429A8E4FF009C63A8 /* SceneDelegate.swift in Sources */,
 				C36CB27D29B8D17300288B8F /* RegisterScreenConstraints.swift in Sources */,
+				C376552129BB850C007913A3 /* AlertManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

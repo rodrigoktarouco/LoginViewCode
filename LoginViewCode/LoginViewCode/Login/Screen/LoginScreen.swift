@@ -48,6 +48,7 @@ class LoginScreen: UIView {
         textField.borderStyle = .roundedRect
         textField.keyboardType = .emailAddress
         textField.textColor = .darkGray
+        textField.autocapitalizationType = .none
         return textField
     }()
 
@@ -83,7 +84,7 @@ class LoginScreen: UIView {
         button.setTitle("Don't have an account? Register", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(didTappedRegisterButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         return button
     }()
 
@@ -108,8 +109,6 @@ class LoginScreen: UIView {
         self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
     }
 
-
-
     private func configSuperView() {
         self.addSubview(loginLabel)
         self.addSubview(logoAppImageView)
@@ -128,7 +127,7 @@ class LoginScreen: UIView {
         self.delegate?.actionLoginButton()
     }
 
-    @objc private func didTappedRegisterButton() {
+    @objc private func didTapRegisterButton() {
         self.delegate?.actionRegisterButton()
     }
 
@@ -151,6 +150,14 @@ class LoginScreen: UIView {
             self.loginButton.setTitleColor(.lightGray, for: .normal)
             self.loginButton.isEnabled = false
         }
+    }
+
+    public func getEmail() -> String {
+        return self.emailTextField.text ?? ""
+    }
+
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
     }
 
     required init?(coder: NSCoder) {

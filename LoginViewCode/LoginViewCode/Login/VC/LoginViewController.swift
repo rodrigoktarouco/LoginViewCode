@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    var auth: Auth?
     var loginScreen: LoginScreen?
+    var alert: AlertManager?
 
     override func loadView() {
         self.loginScreen = LoginScreen()
@@ -18,15 +21,17 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var auth = Auth.auth()
         self.loginScreen?.delegate(delegate: self)
         self.loginScreen?.configTextFieldDelegate(delegate: self)
+        self.alert = AlertManager(controller: self)
     }
-
-    
 
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
+
+    
 
 }
 
@@ -49,11 +54,24 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginScreenProtocol {
     func actionLoginButton() {
-        print("Login button success")
+        guard let login = self.loginScreen else { return }
+
+        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword()) { user, error in
+            if error != nil {
+                self.alert?.getAlert(title: "Attention", message: "Incorrect credentials, try again!")
+            } else {
+                if user == nil {
+                    self.alert?.getAlert(title: "Attention", message: "We had an inexpected problem, try again later!")
+                } else {
+                    self.alert?.getAlert(title: "Attention", message: "User logged in!")
+                }
+            }
+        }
+
+        
     }
 
     func actionRegisterButton() {
-        print("Register button success")
         let vc = RegisterViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }

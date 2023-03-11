@@ -54,23 +54,22 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginScreenProtocol {
     func actionLoginButton() {
-        guard let login = self.loginScreen else { return }
-
-        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword()) { user, error in
-            if error != nil {
-                self.alert?.getAlert(title: "Attention", message: "Incorrect credentials, try again!")
-            } else {
-                if user == nil {
-                    self.alert?.getAlert(title: "Attention", message: "We had an inexpected problem, try again later!")
-                } else {
-                    self.alert?.getAlert(title: "Attention", message: "User logged in!")
-                }
-            }
-        }
-
-        
+        let vc: HomeViewController = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+//        guard let login = self.loginScreen else { return }
+//
+//        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword()) { user, error in
+//            if error != nil {
+//                self.alert?.getAlert(title: "Attention", message: "Incorrect credentials, try again!")
+//            } else {
+//                if user == nil {
+//                    self.alert?.getAlert(title: "Attention", message: "We had an inexpected problem, try again later!")
+//                } else {
+//                    self.alert?.getAlert(title: "Attention", message: "User logged in!")
+//                }
+//            }
+//        }
     }
-
     func actionRegisterButton() {
         let vc = RegisterViewController()
         self.navigationController?.pushViewController(vc, animated: true)

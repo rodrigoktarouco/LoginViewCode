@@ -59,5 +59,4 @@ extension RegisterViewController: RegisterScreenProtocol {
             }
         }
     }
-
 }

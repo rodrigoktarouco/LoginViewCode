@@ -1,15 +1,13 @@
 //
-//  UserDetailTableViewCell.swift
+//  UserDetailView.swift
 //  LoginViewCode
 //
-//  Created by Rodrigo Kroef Tarouco on 12/03/23.
+//  Created by Rodrigo Kroef Tarouco on 13/03/23.
 //
 
 import UIKit
 
-class UserDetailTableViewCell: UITableViewCell {
-
-    static let identifier: String = "UserDetailTableViewCell"
+class UserDetailView: UIView {
 
     lazy var userImageView: UIImageView = {
         let image = UIImageView()
@@ -25,8 +23,8 @@ class UserDetailTableViewCell: UITableViewCell {
         return label
     }()
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         self.addSubview()
         self.setUpConstraints()
     }
@@ -36,13 +34,10 @@ class UserDetailTableViewCell: UITableViewCell {
     }
 
     func addSubview() {
-        self.contentView.addSubview(userImageView)
-        self.contentView.addSubview(namedLabel)
+        self.addSubview(userImageView)
+        self.addSubview(namedLabel)
     }
 
-    public func setUpCell(data: UserData) {
-        self.namedLabel.text = data.name
-        self.userImageView.image = UIImage(named: data.nameImage)
-    }
+    
 
 }

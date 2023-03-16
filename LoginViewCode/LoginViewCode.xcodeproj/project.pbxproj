@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A439555305927D72FE9B4DCA /* Pods_LoginViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F08B7EA548C96CA4604221 /* Pods_LoginViewCode.framework */; };
+		C300CC4B29C0E0DE00B21CAE /* SportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300CC4A29C0E0DE00B21CAE /* SportsTableViewCell.swift */; };
+		C300CC4E29C0E3F900B21CAE /* SportsTableViewScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300CC4D29C0E3F900B21CAE /* SportsTableViewScreenCell.swift */; };
 		C31700CD29BCB6CE0070D4B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31700CC29BCB6CE0070D4B5 /* HomeViewController.swift */; };
 		C31700CF29BCBA760070D4B5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31700CE29BCBA760070D4B5 /* HomeScreen.swift */; };
 		C31700D129BCC7BE0070D4B5 /* HomeScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31700D029BCC7BE0070D4B5 /* HomeScreenConstraints.swift */; };
@@ -17,6 +19,9 @@
 		C346E8C029ACD7CA0089D0BA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346E8BF29ACD7CA0089D0BA /* LoginScreen.swift */; };
 		C36CB27D29B8D17300288B8F /* RegisterScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CB27C29B8D17300288B8F /* RegisterScreenConstraints.swift */; };
 		C376552129BB850C007913A3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376552029BB850C007913A3 /* AlertManager.swift */; };
+		C3995A5629BF5F3400127B3D /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3995A5529BF5F3400127B3D /* UserDetailView.swift */; };
+		C39F4D9429C23ABD000A0C32 /* SportsTableViewCellScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F4D9329C23ABD000A0C32 /* SportsTableViewCellScreenConstraints.swift */; };
+		C39F4D9629C23AF0000A0C32 /* SportsTableViewCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F4D9529C23AF0000A0C32 /* SportsTableViewCellConstraints.swift */; };
 		C39F7FFF29BDF8260042FA30 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F7FFE29BDF8260042FA30 /* UserDetailTableViewCell.swift */; };
 		C39F800129BDFA890042FA30 /* UserDetailTableViewCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F800029BDFA890042FA30 /* UserDetailTableViewCellConstraints.swift */; };
 		C39F800429BDFCF90042FA30 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F800329BDFCF90042FA30 /* UserData.swift */; };
@@ -26,12 +31,19 @@
 		C3C57E8629A8E4FF009C63A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C57E8529A8E4FF009C63A8 /* LoginViewController.swift */; };
 		C3C57E8B29A8E500009C63A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3C57E8A29A8E500009C63A8 /* Assets.xcassets */; };
 		C3C57E8E29A8E500009C63A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C57E8C29A8E500009C63A8 /* LaunchScreen.storyboard */; };
+		C3E49B1729C3430C00120EDA /* SportsTableViewCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E49B1629C3430C00120EDA /* SportsTableViewCellProtocols.swift */; };
+		C3E49B1A29C3440900120EDA /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E49B1929C3440900120EDA /* SportsCollectionViewCell.swift */; };
+		C3E49B1D29C34F1F00120EDA /* SportCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E49B1C29C34F1F00120EDA /* SportCollectionViewCellScreen.swift */; };
+		C3E49B1F29C352DB00120EDA /* SportsCollectionViewCellScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E49B1E29C352DB00120EDA /* SportsCollectionViewCellScreenConstraints.swift */; };
+		C3E49B2129C3542100120EDA /* SportsCollectionViewCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E49B2029C3542100120EDA /* SportsCollectionViewCellConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44898148D249BE5B59E9F3AE /* Pods-LoginViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViewCode.release.xcconfig"; path = "Target Support Files/Pods-LoginViewCode/Pods-LoginViewCode.release.xcconfig"; sourceTree = "<group>"; };
 		5405B4498B4658A70AF3CBC4 /* Pods-LoginViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginViewCode.debug.xcconfig"; path = "Target Support Files/Pods-LoginViewCode/Pods-LoginViewCode.debug.xcconfig"; sourceTree = "<group>"; };
 		81F08B7EA548C96CA4604221 /* Pods_LoginViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C300CC4A29C0E0DE00B21CAE /* SportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCell.swift; sourceTree = "<group>"; };
+		C300CC4D29C0E3F900B21CAE /* SportsTableViewScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewScreenCell.swift; sourceTree = "<group>"; };
 		C31700CC29BCB6CE0070D4B5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C31700CE29BCBA760070D4B5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C31700D029BCC7BE0070D4B5 /* HomeScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenConstraints.swift; sourceTree = "<group>"; };
@@ -41,6 +53,9 @@
 		C346E8BF29ACD7CA0089D0BA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		C36CB27C29B8D17300288B8F /* RegisterScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenConstraints.swift; sourceTree = "<group>"; };
 		C376552029BB850C007913A3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		C3995A5529BF5F3400127B3D /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		C39F4D9329C23ABD000A0C32 /* SportsTableViewCellScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCellScreenConstraints.swift; sourceTree = "<group>"; };
+		C39F4D9529C23AF0000A0C32 /* SportsTableViewCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCellConstraints.swift; sourceTree = "<group>"; };
 		C39F7FFE29BDF8260042FA30 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		C39F800029BDFA890042FA30 /* UserDetailTableViewCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCellConstraints.swift; sourceTree = "<group>"; };
 		C39F800329BDFCF90042FA30 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -52,6 +67,11 @@
 		C3C57E8A29A8E500009C63A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3C57E8D29A8E500009C63A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3C57E8F29A8E500009C63A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E49B1629C3430C00120EDA /* SportsTableViewCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewCellProtocols.swift; sourceTree = "<group>"; };
+		C3E49B1929C3440900120EDA /* SportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3E49B1C29C34F1F00120EDA /* SportCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		C3E49B1E29C352DB00120EDA /* SportsCollectionViewCellScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCellScreenConstraints.swift; sourceTree = "<group>"; };
+		C3E49B2029C3542100120EDA /* SportsCollectionViewCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCellConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +92,36 @@
 				81F08B7EA548C96CA4604221 /* Pods_LoginViewCode.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C300CC4829C0E07200B21CAE /* UserDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C39F7FFE29BDF8260042FA30 /* UserDetailTableViewCell.swift */,
+				C3995A5229BF5ED400127B3D /* CustomView */,
+			);
+			path = UserDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		C300CC4929C0E0B300B21CAE /* SportsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C300CC4A29C0E0DE00B21CAE /* SportsTableViewCell.swift */,
+				C39F4D9529C23AF0000A0C32 /* SportsTableViewCellConstraints.swift */,
+				C3E49B1629C3430C00120EDA /* SportsTableViewCellProtocols.swift */,
+				C300CC4C29C0E3B700B21CAE /* CustomView */,
+				C3E49B1829C343A900120EDA /* CollectionViewCell */,
+			);
+			path = SportsTableViewCell;
+			sourceTree = "<group>";
+		};
+		C300CC4C29C0E3B700B21CAE /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C300CC4D29C0E3F900B21CAE /* SportsTableViewScreenCell.swift */,
+				C39F4D9329C23ABD000A0C32 /* SportsTableViewCellScreenConstraints.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		C31700C929BCB6A10070D4B5 /* Home */ = {
@@ -162,11 +212,20 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		C3995A5229BF5ED400127B3D /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C39F800029BDFA890042FA30 /* UserDetailTableViewCellConstraints.swift */,
+				C3995A5529BF5F3400127B3D /* UserDetailView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		C39F7FFD29BDF7D80042FA30 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C39F7FFE29BDF8260042FA30 /* UserDetailTableViewCell.swift */,
-				C39F800029BDFA890042FA30 /* UserDetailTableViewCellConstraints.swift */,
+				C300CC4929C0E0B300B21CAE /* SportsTableViewCell */,
+				C300CC4829C0E07200B21CAE /* UserDetailTableViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -212,6 +271,25 @@
 				C3BF945929BA141200D3B507 /* GoogleService-Info.plist */,
 			);
 			path = LoginViewCode;
+			sourceTree = "<group>";
+		};
+		C3E49B1829C343A900120EDA /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3E49B1929C3440900120EDA /* SportsCollectionViewCell.swift */,
+				C3E49B2029C3542100120EDA /* SportsCollectionViewCellConstraints.swift */,
+				C3E49B1B29C34EE800120EDA /* CollectionCustomView */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C3E49B1B29C34EE800120EDA /* CollectionCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C3E49B1C29C34F1F00120EDA /* SportCollectionViewCellScreen.swift */,
+				C3E49B1E29C352DB00120EDA /* SportsCollectionViewCellScreenConstraints.swift */,
+			);
+			path = CollectionCustomView;
 			sourceTree = "<group>";
 		};
 		D7D34A774AC32DE89BEE0706 /* Pods */ = {
@@ -339,17 +417,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32770A829B25ABD00471EC6 /* RegisterScreen.swift in Sources */,
+				C39F4D9629C23AF0000A0C32 /* SportsTableViewCellConstraints.swift in Sources */,
 				C3C57E8629A8E4FF009C63A8 /* LoginViewController.swift in Sources */,
 				C3469D1B29B773BF0065336A /* LoginScreenConstraints.swift in Sources */,
 				C39F800429BDFCF90042FA30 /* UserData.swift in Sources */,
 				C32770A629B24E3800471EC6 /* RegisterViewController.swift in Sources */,
 				C31700CF29BCBA760070D4B5 /* HomeScreen.swift in Sources */,
+				C3E49B1729C3430C00120EDA /* SportsTableViewCellProtocols.swift in Sources */,
+				C300CC4B29C0E0DE00B21CAE /* SportsTableViewCell.swift in Sources */,
 				C346E8C029ACD7CA0089D0BA /* LoginScreen.swift in Sources */,
 				C31700CD29BCB6CE0070D4B5 /* HomeViewController.swift in Sources */,
+				C39F4D9429C23ABD000A0C32 /* SportsTableViewCellScreenConstraints.swift in Sources */,
 				C3C57E8229A8E4FF009C63A8 /* AppDelegate.swift in Sources */,
+				C3E49B1D29C34F1F00120EDA /* SportCollectionViewCellScreen.swift in Sources */,
+				C3E49B2129C3542100120EDA /* SportsCollectionViewCellConstraints.swift in Sources */,
+				C300CC4E29C0E3F900B21CAE /* SportsTableViewScreenCell.swift in Sources */,
 				C39F800129BDFA890042FA30 /* UserDetailTableViewCellConstraints.swift in Sources */,
 				C3C57E8429A8E4FF009C63A8 /* SceneDelegate.swift in Sources */,
 				C36CB27D29B8D17300288B8F /* RegisterScreenConstraints.swift in Sources */,
+				C3E49B1A29C3440900120EDA /* SportsCollectionViewCell.swift in Sources */,
+				C3995A5629BF5F3400127B3D /* UserDetailView.swift in Sources */,
+				C3E49B1F29C352DB00120EDA /* SportsCollectionViewCellScreenConstraints.swift in Sources */,
 				C39F7FFF29BDF8260042FA30 /* UserDetailTableViewCell.swift in Sources */,
 				C376552129BB850C007913A3 /* AlertManager.swift in Sources */,
 				C31700D129BCC7BE0070D4B5 /* HomeScreenConstraints.swift in Sources */,

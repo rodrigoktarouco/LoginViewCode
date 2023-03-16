@@ -31,10 +31,14 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return data.count + 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 3 {
+            let cell: SportsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: SportsTableViewCell.identifier, for: indexPath) as? SportsTableViewCell
+            return cell ?? UITableViewCell()
+        }
         let cell: UserDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: UserDetailTableViewCell.identifier, for: indexPath) as? UserDetailTableViewCell
         cell?.setUpCell(data: data[indexPath.row])
         return cell ?? UITableViewCell()

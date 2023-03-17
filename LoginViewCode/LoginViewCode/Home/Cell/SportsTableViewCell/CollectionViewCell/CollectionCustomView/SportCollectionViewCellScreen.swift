@@ -9,11 +9,19 @@ import UIKit
 
 class SportCollectionViewCellScreen: UIView {
 
-    lazy var viewBackGround: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
-        return view
+    lazy var imageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+
+    lazy var sportName: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.textColor = .darkGray
+        return label
     }()
 
     override init(frame: CGRect) {
@@ -28,7 +36,8 @@ class SportCollectionViewCellScreen: UIView {
     }
 
     func addSubView() {
-        self.addSubview(viewBackGround)
+        self.addSubview(imageView)
+        self.addSubview(sportName)
     }
 
 }

@@ -10,10 +10,15 @@ import UIKit
 extension SportCollectionViewCellScreen {
     func configConstraints() {
         NSLayoutConstraint.activate([
-            self.viewBackGround.topAnchor.constraint(equalTo: self.topAnchor),
-            self.viewBackGround.leftAnchor.constraint(equalTo: self.leftAnchor),
-            self.viewBackGround.rightAnchor.constraint(equalTo: self.rightAnchor),
-            self.viewBackGround.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            self.imageView.bottomAnchor.constraint(equalTo: self.sportName.topAnchor, constant: -10),
+
+            self.sportName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.sportName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            self.sportName.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            self.sportName.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
 }

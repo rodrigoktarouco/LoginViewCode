@@ -17,6 +17,7 @@
 		C32770A829B25ABD00471EC6 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32770A729B25ABD00471EC6 /* RegisterScreen.swift */; };
 		C3469D1B29B773BF0065336A /* LoginScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3469D1A29B773BF0065336A /* LoginScreenConstraints.swift */; };
 		C346E8C029ACD7CA0089D0BA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346E8BF29ACD7CA0089D0BA /* LoginScreen.swift */; };
+		C360ECE229C4C61B0054AF81 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360ECE129C4C61B0054AF81 /* Sport.swift */; };
 		C36CB27D29B8D17300288B8F /* RegisterScreenConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CB27C29B8D17300288B8F /* RegisterScreenConstraints.swift */; };
 		C376552129BB850C007913A3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376552029BB850C007913A3 /* AlertManager.swift */; };
 		C3995A5629BF5F3400127B3D /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3995A5529BF5F3400127B3D /* UserDetailView.swift */; };
@@ -51,6 +52,7 @@
 		C32770A729B25ABD00471EC6 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		C3469D1A29B773BF0065336A /* LoginScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenConstraints.swift; sourceTree = "<group>"; };
 		C346E8BF29ACD7CA0089D0BA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		C360ECE129C4C61B0054AF81 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		C36CB27C29B8D17300288B8F /* RegisterScreenConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenConstraints.swift; sourceTree = "<group>"; };
 		C376552029BB850C007913A3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		C3995A5529BF5F3400127B3D /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				C39F800329BDFCF90042FA30 /* UserData.swift */,
+				C360ECE129C4C61B0054AF81 /* Sport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				C3469D1B29B773BF0065336A /* LoginScreenConstraints.swift in Sources */,
 				C39F800429BDFCF90042FA30 /* UserData.swift in Sources */,
 				C32770A629B24E3800471EC6 /* RegisterViewController.swift in Sources */,
+				C360ECE229C4C61B0054AF81 /* Sport.swift in Sources */,
 				C31700CF29BCBA760070D4B5 /* HomeScreen.swift in Sources */,
 				C3E49B1729C3430C00120EDA /* SportsTableViewCellProtocols.swift in Sources */,
 				C300CC4B29C0E0DE00B21CAE /* SportsTableViewCell.swift in Sources */,
